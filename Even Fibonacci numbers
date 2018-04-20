@@ -1,0 +1,25 @@
+package practice;
+public class Practice
+{
+    public static void main(String[] args)
+    {
+        int total = 0;
+	int one = 1;
+	int two = 2;
+	int three = 0;
+	
+        while(three < 4000000)
+        {
+            three = one + two;
+            if(three % 2 ==0)
+                {
+                    total = total + three;
+                }
+            one = two;
+            two = three;
+            System.out.println(three);
+            
+        }
+       System.out.println("Sum of even-valued terms is: " + total);         
+    }
+}
