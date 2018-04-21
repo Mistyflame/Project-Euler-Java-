@@ -1,0 +1,26 @@
+package practice;
+public class Practice
+{
+    public static void main(String[] args)
+    {
+        int max = 0;
+        for(int i = 100; i<999; i++)
+        {   
+            for(int k = 100; k < 999; k++)
+            {   
+                int total = i*k;
+                if(isPalindrome(total)==true && total > max)
+                    max = total;
+            }       
+        }
+        
+       System.out.println("Largest palindrome made: " + max);
+        
+    }
+    public static boolean isPalindrome(int integer) 
+    {
+    String intStr = String.valueOf(integer); 
+    return intStr.equals(new StringBuilder(intStr).reverse().toString());
+    
+    }
+}
